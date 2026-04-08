@@ -315,7 +315,9 @@ export default function PatientPage() {
       <div className="min-h-screen bg-background text-foreground px-4 py-6 md:px-6">
         <div className="max-w-md mx-auto space-y-4">
           <div className="text-center space-y-2">
-            <div className="w-10 h-10 rounded-2xl premium-gradient text-white mx-auto flex items-center justify-center text-xs font-black shadow-lg">DL</div>
+            <div className="w-10 h-10 rounded-2xl overflow-hidden bg-white ring-1 ring-primary/20 mx-auto shadow-lg">
+              <img src="/brand-logo.png" alt="DermaLink logo" className="w-full h-full object-cover" />
+            </div>
             <h1 className="text-2xl font-black leading-tight tracking-tight">DermaLinkga xush kelibsiz</h1>
             <p className="text-sm font-semibold opacity-70 max-w-[280px] mx-auto">AI orqali teri holatini tezkor tekshirish uchun tizimga kiring yoki ro'yxatdan o'ting.</p>
           </div>
@@ -354,7 +356,9 @@ export default function PatientPage() {
         <header className="surface-panel p-4 md:p-5">
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl premium-gradient text-white flex items-center justify-center font-black text-sm shadow-lg">DL</div>
+              <div className="w-10 h-10 rounded-2xl overflow-hidden bg-white ring-1 ring-primary/20 shadow-lg">
+                <img src="/brand-logo.png" alt="DermaLink logo" className="w-full h-full object-cover" />
+              </div>
               <div>
                 <h2 className="text-2xl md:text-3xl font-black leading-tight flex items-center gap-2">DermaLink <Shield className="w-5 h-5 text-primary" /></h2>
                 <p className="text-xs opacity-75 font-semibold">AI-based skin assistant</p>

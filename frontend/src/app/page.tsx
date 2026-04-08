@@ -10,7 +10,6 @@ import {
   CheckCircle2,
   Loader2,
   PieChart,
-  Stethoscope,
   Upload,
 } from "lucide-react";
 import axios from "axios";
@@ -130,8 +129,8 @@ export default function DoctorPage() {
           <DoctorTopNav />
 
           <header className="flex items-center gap-3">
-            <div className="premium-gradient p-2.5 rounded-xl shadow-lg lg:hidden">
-              <Stethoscope className="w-5 h-5 text-white" />
+            <div className="w-10 h-10 rounded-xl overflow-hidden bg-white ring-1 ring-primary/20 shadow-lg lg:hidden">
+              <img src="/brand-logo.png" alt="DermaLink logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Doktor panel</p>

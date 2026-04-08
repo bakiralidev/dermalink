@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Stethoscope } from "lucide-react";
 
 interface DoctorSidebarProps {
   activeModel?: string;
@@ -21,8 +20,8 @@ export default function DoctorSidebar({ activeModel = "default" }: DoctorSidebar
   return (
     <aside className="hidden lg:flex w-72 border-r border-border glass flex-col p-6 sticky top-0 h-dvh">
       <div className="flex items-center gap-3 mb-8">
-        <div className="premium-gradient p-3 rounded-2xl shadow-lg">
-          <Stethoscope className="w-5 h-5 text-white" />
+        <div className="w-11 h-11 rounded-2xl overflow-hidden bg-white ring-1 ring-primary/20 shadow-lg shrink-0">
+          <img src="/brand-logo.png" alt="DermaLink logo" className="w-full h-full object-cover" />
         </div>
         <div>
           <h1 className="font-black text-2xl tracking-tight">DermaLink</h1>
