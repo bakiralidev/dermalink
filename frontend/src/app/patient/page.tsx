@@ -315,9 +315,7 @@ export default function PatientPage() {
       <div className="min-h-screen bg-background text-foreground px-4 py-6 md:px-6">
         <div className="max-w-md mx-auto space-y-4">
           <div className="text-center space-y-2">
-            <div className="w-10 h-10 rounded-2xl overflow-hidden bg-white ring-1 ring-primary/20 mx-auto shadow-lg">
-              <img src="/brand-logo.png" alt="DermaLink logo" className="w-full h-full object-cover" />
-            </div>
+            <img src="/brand-logo.png" alt="DermaLink logo" className="h-11 w-[160px] object-contain mx-auto" />
             <h1 className="text-2xl font-black leading-tight tracking-tight">DermaLinkga xush kelibsiz</h1>
             <p className="text-sm font-semibold opacity-70 max-w-[280px] mx-auto">AI orqali teri holatini tezkor tekshirish uchun tizimga kiring yoki ro'yxatdan o'ting.</p>
           </div>
@@ -356,12 +354,9 @@ export default function PatientPage() {
         <header className="surface-panel p-4 md:p-5">
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl overflow-hidden bg-white ring-1 ring-primary/20 shadow-lg">
-                <img src="/brand-logo.png" alt="DermaLink logo" className="w-full h-full object-cover" />
-              </div>
+              <img src="/brand-logo.png" alt="DermaLink logo" className="h-11 w-[160px] md:w-[180px] object-contain shrink-0" />
               <div>
-                <h2 className="text-2xl md:text-3xl font-black leading-tight flex items-center gap-2">DermaLink <Shield className="w-5 h-5 text-primary" /></h2>
-                <p className="text-xs opacity-75 font-semibold">AI-based skin assistant</p>
+                <p className="text-lg md:text-2xl font-black leading-tight">AI orqali teri holatini aniqlang</p>
               </div>
             </div>
             <button
@@ -385,8 +380,6 @@ export default function PatientPage() {
 
           <div className="space-y-4">
             <div className="pt-2 pb-4">
-              <p className="text-[11px] uppercase tracking-[0.18em] font-black text-primary mb-1">AI Skin Check</p>
-              <h3 className="text-2xl md:text-3xl font-black mb-1">AI orqali teri holatini aniqlang</h3>
               <p className="text-sm md:text-base font-semibold opacity-80 mb-3 max-w-xl">Rasm yuklang, asosiy ma'lumotlarni kiriting va bir necha soniyada natija hamda tavsiyalarni oling.</p>
               <div className="flex flex-wrap gap-2 mb-2">
                 <button onClick={() => setPatientTab('history')} className="btn-press px-3 py-2 rounded-lg border border-border text-sm font-bold hover:border-primary/45 flex items-center gap-2"><History className="w-4 h-4" /> Tarix</button>
@@ -415,19 +408,17 @@ export default function PatientPage() {
                       setPatientError(null);
                     }}
                   />
-                  <div className="flex items-center gap-3">
-                    <button type="button" onClick={() => patientFileInputRef.current?.click()} className="btn-press border border-dashed border-primary/40 rounded-2xl p-4 hover:bg-primary/5 flex flex-col items-center justify-center">
-                      <ImagePlus className="w-7 h-7 text-primary mb-1" />
-                      <span className="font-black text-base">Rasm yuklash</span>
-                      <span className="text-xs opacity-70 font-semibold">Kamera yoki galereyadan tanlang</span>
-                    </button>
+                  <button type="button" onClick={() => patientFileInputRef.current?.click()} className="btn-press inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/35 bg-background/40 hover:bg-primary/5 text-sm font-semibold">
+                    <ImagePlus className="w-4 h-4 text-primary" />
+                    <span>Rasm yuklash</span>
+                    <span className="text-xs opacity-70 font-semibold">Kamera yoki galereyadan tanlang</span>
+                  </button>
                     {patientPreview && (
                       <div className="relative group cursor-pointer" style={{ width: 80, height: 80 }}>
                         <img src={patientPreview} alt="Patient preview" className="w-20 h-20 object-cover border border-border rounded-xl" onClick={() => setShowImageModal(true)} />
                         <span className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-xs rounded-xl transition">Katta ko'rish</span>
                       </div>
                     )}
-                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <Input label="Yosh" type="number" value={age} onChange={setAge} icon={<Calendar className="w-3.5 h-3.5" />} />
                     <Select label="Jins" value={sex} onChange={setSex} options={["male", "female"]} />

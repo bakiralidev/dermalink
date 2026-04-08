@@ -129,13 +129,7 @@ export default function DoctorPage() {
           <DoctorTopNav />
 
           <header className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl overflow-hidden bg-white ring-1 ring-primary/20 shadow-lg lg:hidden">
-              <img src="/brand-logo.png" alt="DermaLink logo" className="w-full h-full object-cover" />
-            </div>
-            <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Doktor panel</p>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tight">Diagnostika markazi</h2>
-            </div>
+            <img src="/brand-logo.png" alt="DermaLink logo" className="h-10 w-[150px] object-contain lg:hidden" />
           </header>
 
           <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
