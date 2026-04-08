@@ -1,0 +1,100 @@
+# ------------------------------
+# Python cache / bytecode
+# ------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ------------------------------
+# Virtual environments
+# ------------------------------
+venv/
+.venv/
+env/
+ENV/
+
+# ------------------------------
+# Environment and secrets
+# ------------------------------
+.env
+.env.*
+*.env
+ngrok.yml
+
+# ------------------------------
+# OS / editor junk
+# ------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ------------------------------
+# Logs and temporary outputs
+# ------------------------------
+*.log
+*.out
+output.txt
+lhr.txt
+lt.txt
+
+# ------------------------------
+# ML artifacts (large / generated)
+# ------------------------------
+models/
+reports/pdf/
+reports/*.json
+*.pt
+*.pth
+*.ckpt
+
+# Keep only runtime model files in weights/
+weights/*
+!weights/
+!weights/best_7class_multimodal.pt
+!weights/best_7class.pt
+!weights/best.pt
+
+# ------------------------------
+# Training / data artifacts
+# ------------------------------
+data/
+backend/data/
+*.db
+
+# Training / experimentation code not needed on production runtime
+train_*.py
+evaluate_phase3.py
+phase_orchestrator.py
+check_ckpt.py
+assignment_solution.py
+read_docx.py
+
+# Local docs and temporary planning files
+jamoa_azolari/
+topshiriq/
+*.md
+*.ps1
+
+# ------------------------------
+# Frontend build artifacts
+# ------------------------------
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/coverage/
+frontend/.vercel/
+frontend/*.tsbuildinfo
+
+# If frontend is a nested git repo, do not include its internal git metadata.
+frontend/.git/
+
+# ------------------------------
+# Packaging / distribution
+# ------------------------------
+build/
+dist/
+*.egg-info/
